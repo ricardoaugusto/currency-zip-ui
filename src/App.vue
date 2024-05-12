@@ -17,10 +17,17 @@
           class="input-field w-1/5 mr-2"
           @keyup.enter="convertCurrency"
         />
-        <button @click="convertCurrency" class="button w-1/5">Convert</button>
+        <button
+          data-testid="convertCurrencyButton"
+          @click="convertCurrency"
+          class="button w-1/5"
+        >
+          Convert
+        </button>
       </div>
       <div
         v-if="response"
+        data-testid="response"
         :class="`response ${responseClass}`"
         :key="responseKey"
       >
